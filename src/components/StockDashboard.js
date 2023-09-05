@@ -3,11 +3,11 @@ import Filter from "./Filter";
 import DenseTable from "./Table";
 
 
-function StockDashboard({allDState}) {
+function StockDashboard({allDiamonds}) {
     const [sortBy, setSortBy] = useState("Carat Weight")
     const [filterBy, setFilterBy] = useState("All")
 
-    const sortedDiamonds = [...allDState].sort(function(a, b) {
+    const sortedDiamonds = [...allDiamonds].sort(function(a, b) {
         if (sortBy === "Carat Weight"){
             return parseFloat(a.weight) - parseFloat(b.weight);
         }
