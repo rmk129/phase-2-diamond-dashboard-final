@@ -20,7 +20,7 @@ export default function DenseTable({newAllDiamonds}) {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
-          <TableRow>
+          <TableRow className='mainRow'>
             <TableCell>Shape</TableCell>
             <TableCell align="right">Color</TableCell>
             <TableCell align="right">Clarity</TableCell>

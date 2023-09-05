@@ -16,6 +16,13 @@ return (
 
    <div>
         <header className="header">
+        <img
+            src="https://www.pngmart.com/files/1/Real-Diamond-PNG.png"
+            alt="diamond"
+            width="120px"
+            length="120px"
+            display= "inline-block"
+            />
             <NavLink
                 to="/"
                 exact
@@ -34,6 +41,7 @@ return (
                 style={linkStyles}
                 activeStyle={{background: "darkorange"}}
             >Stock</NavLink>
+
         </header>
     </div>
 
