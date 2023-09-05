@@ -1,19 +1,112 @@
 {
-  "posts": [
+  "diamonds": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "shape": "Round",
+      "color": "D",
+      "clarity": "VS1",
+      "cut": "Excellent",
+      "weight": "1.53",
+      "price": "2000"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "shape": "Round",
+      "color": "E",
+      "clarity": "SI1",
+      "cut": "Excellent",
+      "weight": "2.23",
+      "price": "2500"
+    },
+    {
+      "id": 3,
+      "shape": "Oval",
+      "color": "F",
+      "clarity": "VS2",
+      "cut": "Excellent",
+      "weight": "1.89",
+      "price": "1800"
+    },
+    {
+      "id": 4,
+      "shape": "Oval",
+      "color": "E",
+      "clarity": "VS1",
+      "cut": "Excellent",
+      "weight": "1.65",
+      "price": "1700"
+    },
+    {
+      "id": 5,
+      "shape": "Radiant",
+      "color": "F",
+      "clarity": "VS2",
+      "cut": "Excellent",
+      "weight": "2.02",
+      "price": "2200"
+    },
+    {
+      "id": 6,
+      "shape": "Radiant",
+      "color": "D",
+      "clarity": "SI1",
+      "cut": "Excellent",
+      "weight": "1.89",
+      "price": "2100"
+    },
+    {
+      "id": 7,
+      "shape": "Emerald",
+      "color": "E",
+      "clarity": "VS2",
+      "cut": "Excellent",
+      "weight": "2.10",
+      "price": "2150"
+    },
+    {
+      "id": 8,
+      "shape": "Emerald",
+      "color": "F",
+      "clarity": "VS2",
+      "cut": "Excellent",
+      "weight": "1.76",
+      "price": "1900"
+    },
+    {
+      "shape": "Radiant",
+      "color": "E",
+      "clarity": "VS2",
+      "cut": "Very Good",
+      "weight": "2.5",
+      "price": "3000",
+      "id": 9
+    },
+    {
+      "shape": "Emerald",
+      "color": "F",
+      "clarity": "SI1",
+      "cut": "Good",
+      "weight": "1.25",
+      "price": "1300",
+      "id": 10
+    },
+    {
+      "shape": "Oval",
+      "color": "E",
+      "clarity": "VS2",
+      "cut": "Very Good",
+      "weight": "1.01ct",
+      "price": "1000",
+      "id": 11
+    },
+    {
+      "shape": "Oval",
+      "color": "E",
+      "clarity": "VS1",
+      "cut": "Excellent",
+      "weight": "1.5",
+      "price": "2000",
+      "id": 12
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 
 
-function StockAddForm({setAllD, allD}) {
+function StockAddForm({setAllDiamonds, allDiamonds}) {
    const [shape, setShape] = useState("Round")
    const [color, setColor] = useState("D")
    const [clarity, setClarity] = useState("VS1")
@@ -37,7 +37,7 @@ function StockAddForm({setAllD, allD}) {
   }
 
   function addDiamond(newDiamond){
-    setAllD([...allD, newDiamond])
+    setAllDiamonds([...allDiamonds, newDiamond])
   }
 
   function handleSubmit(event){
@@ -60,7 +60,6 @@ function StockAddForm({setAllD, allD}) {
     fetch('http://localhost:3000/diamonds', configObj)
     .then(res => res.json())
     .then(data => addDiamond(data))
-    console.log(allD)
     history.push("/dashboard")
     alert("Your Diamond has been added!")
 

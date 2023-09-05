@@ -22,7 +22,7 @@ function App() {
       <NavBar/>
      <Switch>
           <Route path="/addform">
-              <StockAddForm allD={allDiamonds} setAllD={setAllDiamonds} />
+              <StockAddForm allDiamonds={allDiamonds} setAllDiamonds={setAllDiamonds} />
           </Route>
           <Route path="/dashboard">
               <StockDashboard allDiamonds={allDiamonds}/>
