@@ -9,6 +9,7 @@ function StockAddForm({setAllDiamonds, allDiamonds}) {
    const [clarity, setClarity] = useState("VS1")
    const [cut, setCut] = useState("Excellent")
    const [weight, setWeight] = useState("")
+   const [cost, setCost] = useState("")
    const [price, setPrice] = useState("")
    const history = useHistory();
 
@@ -18,6 +19,10 @@ function StockAddForm({setAllDiamonds, allDiamonds}) {
 
   function handlePriceChange(e){
     setPrice(e.target.value);
+  }
+
+  function handleCostChange(e){
+    setCost(e.target.value);
   }
   
   function handleShapeChange(e){
@@ -104,11 +109,15 @@ return (
             </label>
             <br/>
             <label>Carat Weight(ct)
-                <input onChange={handleWeightChange} type="text" value={weight} />
+                <input onChange={handleWeightChange} type="number" value={weight} />
+            </label>
+            <br/>
+            <label>Cost $
+                <input onChange={handleCostChange} type="number" value={cost} />
             </label>
             <br/>
             <label>Selling Price $
-                <input onChange={handlePriceChange} type="text" value={price} />
+                <input onChange={handlePriceChange} type="number" value={price} />
             </label>
             <br/>
             <button type="submit">Add Diamond</button>

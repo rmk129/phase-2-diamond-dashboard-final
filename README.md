@@ -1,4 +1,4 @@
-Welcome to my phase-2 Final Project. The Diamond Dashboard.
+#Welcome to my phase-2 Final Project. The Diamond Dashboard.
 
 This project was created using react and react router dom.
 The styling for this project was done using MUI (Material UI)
