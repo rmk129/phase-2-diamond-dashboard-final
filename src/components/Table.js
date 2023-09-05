@@ -26,7 +26,8 @@ export default function DenseTable({newAllDiamonds}) {
             <TableCell align="right">Clarity</TableCell>
             <TableCell align="right">Cut</TableCell>
             <TableCell align="right">Weight</TableCell>
-            <TableCell align="right">Price</TableCell>
+            <TableCell align="right">Cost</TableCell>
+            <TableCell align="right">Selling Price</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -42,6 +43,7 @@ export default function DenseTable({newAllDiamonds}) {
               <TableCell align="right">{dia.clarity}</TableCell>
               <TableCell align="right">{dia.cut}</TableCell>
               <TableCell align="right">{dia.weight}ct</TableCell>
+              <TableCell align="right">${dia.cost}</TableCell>
               <TableCell align="right">${dia.price}</TableCell>
             </TableRow>
           ))}
