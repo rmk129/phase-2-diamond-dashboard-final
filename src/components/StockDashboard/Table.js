@@ -17,18 +17,19 @@ export default function StockTable({newAllDiamonds, sellDiamonds, setSellDiamond
   }
 
 function handleSellClick(e){
-    const newSell = e.target.value
+  const jsonData = e.target.value; 
+  const dia = JSON.parse(jsonData);
   
       
 
     const formData = {
-      shape: newSell["shape"],
-      color: newSell["color"],
-      clarity: newSell["clarity"],
-      cut: newSell["cut"],
-      weight: newSell["weight"],
-      cost: newSell["cost"],
-      price: newSell["price"]
+      shape: dia.shape,
+      color: dia.color,
+      clarity: dia.clarity,
+      cut: dia.cut,
+      weight: dia.weight,
+      cost: dia.cost,
+      price: dia.price
   }
 
   const configObj = {
