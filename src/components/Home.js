@@ -8,7 +8,7 @@ function Home() {
  return (   
     <div>
         <h1>Welcome To Your Diamond Inventory</h1>
-        <h2>Here, you will be able to view your entire diamond invnetory and filter it based on shape, carat weight
+        <h2>Here, you will be able to view your entire diamond inventory and filter it based on shape, carat weight
             and selling price
             </h2>
             <hr/>

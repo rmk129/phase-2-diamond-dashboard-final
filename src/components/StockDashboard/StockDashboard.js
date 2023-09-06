@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Filter from "./Filter";
-import DenseTable from "./Table";
+import StockTable from "./Table";
 
 
 function StockDashboard({allDiamonds}) {
@@ -26,7 +26,7 @@ return (
         <hr/>
         <Filter sortBy={sortBy} setSortBy={setSortBy} filterBy={filterBy} setFilterBy={setFilterBy} />
         <hr/>
-        <DenseTable newAllDiamonds={newAllDiamonds} />
+        <StockTable newAllDiamonds={newAllDiamonds} />
     </div>
 
 

@@ -13,9 +13,11 @@ import { TableContainer } from '@mui/material';
 import { TableHead } from '@mui/material';
 import { TableRow } from '@mui/material';
 import { Paper } from '@mui/material';
+import Button from 'react-bootstrap/Button';
 
 
-export default function DenseTable({newAllDiamonds}) {
+
+export default function StockTable({newAllDiamonds}) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
@@ -28,6 +30,7 @@ export default function DenseTable({newAllDiamonds}) {
             <TableCell align="right">Weight</TableCell>
             <TableCell align="right">Cost</TableCell>
             <TableCell align="right">Selling Price</TableCell>
+            <TableCell align="right">Click To Sell</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -45,6 +48,10 @@ export default function DenseTable({newAllDiamonds}) {
               <TableCell align="right">{dia.weight}ct</TableCell>
               <TableCell align="right">${dia.cost}</TableCell>
               <TableCell align="right">${dia.price}</TableCell>
+              <TableCell align="right">
+                <Button>Sell</Button>
+              </TableCell>
+
             </TableRow>
           ))}
         </TableBody>
