@@ -53,6 +53,7 @@ function StockAddForm({setAllDiamonds, allDiamonds}) {
         clarity: clarity,
         cut: cut,
         weight: weight,
+        cost: cost,
         price: price,
     }
 

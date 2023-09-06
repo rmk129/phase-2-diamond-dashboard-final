@@ -1,15 +1,8 @@
 import * as React from 'react';
-//import Table from '@mui/material/Table';
 import { Table } from '@mui/material';
-//import TableBody from '@mui/material/TableBody';
 import { TableBody } from '@mui/material';
-//import TableCell from '@mui/material/TableCell';
 import { TableCell } from '@mui/material';
 import { TableContainer } from '@mui/material';
-//import TableContainer from '@mui/material/TableContainer';
-//import TableHead from '@mui/material/TableHead';
-//import TableRow from '@mui/material/TableRow';
-//import Paper from '@mui/material/Paper';
 import { TableHead } from '@mui/material';
 import { TableRow } from '@mui/material';
 import { Paper } from '@mui/material';
@@ -17,9 +10,37 @@ import Button from 'react-bootstrap/Button';
 
 
 
-export default function StockTable({newAllDiamonds}) {
+export default function StockTable({newAllDiamonds, sellDiamonds, setSellDiamonds}) {
 
-  
+  function addSellDiamond(data){
+    console.log(data)
+  }
+
+function handleSellClick(e){
+      const eshape = e.target.value.shape
+
+    const formData = {
+      shape: eshape,
+      // color: newSell.color,
+      // clarity: newSell.clarity,
+      // cut: newSell.cut,
+      // weight: newSell.weight,
+      // cost: newSell.cost,
+      // price: newSell.price,
+  }
+
+  const configObj = {
+      method: 'POST', 
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(formData)
+  }
+
+  fetch('http://localhost:3000/diamondsToSell', configObj)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  alert("Your Diamond has been added to your Sales Cart!")
+    
+}
 
 
   return (
@@ -53,7 +74,7 @@ export default function StockTable({newAllDiamonds}) {
               <TableCell align="right">${dia.cost}</TableCell>
               <TableCell align="right">${dia.price}</TableCell>
               <TableCell align="right">
-                <Button>Sell</Button>
+                <Button value={JSON.stringify(dia)} onClick={handleSellClick}>Sell</Button>
               </TableCell>
 
             </TableRow>

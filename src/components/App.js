@@ -10,12 +10,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [allDiamonds, setAllDiamonds] = useState([])
+  const [sellDiamonds, setSellDiamonds] = useState([])
   
   useEffect(()=> {
     fetch("http://localhost:3000/diamonds")
     .then((r)=> r.json())
     .then((diamondsData)=> setAllDiamonds(diamondsData) )
   }, [])
+
+  useEffect(()=> {
+    fetch("http://localhost:3000/diamonds")
+    .then((r)=> r.json())
+    .then((diamondsData)=> setSellDiamonds(diamondsData) )
+  }, [])
+
 
  
 
@@ -27,7 +35,7 @@ function App() {
               <StockAddForm allDiamonds={allDiamonds} setAllDiamonds={setAllDiamonds} />
           </Route>
           <Route path="/stockdashboard">
-              <StockDashboard allDiamonds={allDiamonds}/>
+              <StockDashboard sellDiamonds={sellDiamonds} setSellDiamonds={setSellDiamonds} allDiamonds={allDiamonds}/>
           </Route>
           <Route path="/selldashboard">
               <SellDashboard />
