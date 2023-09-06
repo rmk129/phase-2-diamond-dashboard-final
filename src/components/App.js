@@ -2,8 +2,9 @@ import React, {useEffect, useState} from "react";
 import Home from "./Home"
 import StockAddForm from "./StockAddForm"
 import StockDashboard from "./StockDashboard";
-import NavBar from "./NavBar";
+import NavBar2 from "./NavBar2";
 import { Route, Switch } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <NavBar/>
+      <NavBar2/>
      <Switch>
           <Route path="/addform">
               <StockAddForm allDiamonds={allDiamonds} setAllDiamonds={setAllDiamonds} />
