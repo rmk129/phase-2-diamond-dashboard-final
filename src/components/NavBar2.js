@@ -17,7 +17,8 @@ function NavBar2(){
             </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/dashboard">Diamond Dashboard</Nav.Link>
+            <Nav.Link href="/stockdashboard">Diamond Dashboard</Nav.Link>
+            <Nav.Link href="/selldashboard">Sell Diamonds</Nav.Link>
             <Nav.Link href="/addform">Add Diamonds</Nav.Link>
           </Nav>
         </Container>

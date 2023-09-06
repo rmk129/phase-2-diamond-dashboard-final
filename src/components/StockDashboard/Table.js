@@ -18,6 +18,10 @@ import Button from 'react-bootstrap/Button';
 
 
 export default function StockTable({newAllDiamonds}) {
+
+  
+
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
