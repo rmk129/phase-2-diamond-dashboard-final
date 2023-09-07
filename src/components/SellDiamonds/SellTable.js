@@ -12,10 +12,6 @@ import Button from 'react-bootstrap/Button';
 
 export default function SellTable({sellDiamonds}) {
 
-//   function addDiamond(data){
-//     setAllDiamonds(...allDiamonds, data)
-//   }
-
 function handleSellCancelClick(e){
   const jsonData = e.target.value; 
   const dia = JSON.parse(jsonData);
@@ -36,9 +32,6 @@ fetch('http://localhost:3000/diamonds/'+ dia.id, configObj)
 .then(res => res.json())
 alert("Your Diamond has been removed from your Sales Cart!")
 
-//   fetch('http://localhost:3000/diamondsToSell/' + dia.id, {
-//   method: 'DELETE',
-// } )
 e.target.parentNode.parentNode.remove();
     
 }

@@ -12,9 +12,9 @@ import Button from 'react-bootstrap/Button';
 
 export default function StockTable({newAllDiamonds2, sellDiamonds, setSellDiamonds}) {
 
-  function addSellDiamond(data){
-    setSellDiamonds(...sellDiamonds, data)
-  }
+  // function addSellDiamond(data){
+  //   setSellDiamonds(...sellDiamonds, data)
+  // }
 
 function handleSellClick(e){
 
@@ -38,9 +38,7 @@ function handleSellClick(e){
   .then(res => res.json())
   alert("Your Diamond has been added to your Sales Cart!")
 
-//   fetch('http://localhost:3000/diamonds/' + dia.id, {
-//   method: 'DELETE',
-// })
+
 e.target.parentNode.parentNode.remove();
     
 }

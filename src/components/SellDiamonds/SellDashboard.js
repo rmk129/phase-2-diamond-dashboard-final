@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import SellTable from "./SellTable";
+import SellForm from "./SellCustomerForm";
 
 
 function SellDashboard({allDiamonds}){
@@ -11,6 +12,8 @@ function SellDashboard({allDiamonds}){
             <h1>Sales Portal</h1>
             <hr/>
           <SellTable sellDiamonds={sellDiamonds} />
+            <hr/>
+            <SellForm/>
         </div>
     
     

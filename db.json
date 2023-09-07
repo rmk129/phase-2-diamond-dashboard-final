@@ -31,7 +31,7 @@
       "cost": "600",
       "price": "1000",
       "id": 7,
-      "sell": "Yes"
+      "sell": "No"
     },
     {
       "shape": "Oval",
@@ -42,7 +42,7 @@
       "cost": "1600",
       "price": "2000",
       "id": 9,
-      "sell": "Yes"
+      "sell": "No"
     },
     {
       "shape": "Emerald",
@@ -97,7 +97,7 @@
       "cost": "1000",
       "price": "1300",
       "id": 15,
-      "sell": "Yes"
+      "sell": "No"
     },
     {
       "shape": "Radiant",

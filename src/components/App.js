@@ -38,7 +38,7 @@ function App() {
               <StockDashboard sellDiamonds={sellDiamonds} setSellDiamonds={setSellDiamonds} allDiamonds={allDiamonds}/>
           </Route>
           <Route path="/selldashboard">
-              <SellDashboard sellDiamonds={sellDiamonds} allDiamonds={allDiamonds} setAllDiamonds={setAllDiamonds} />
+              <SellDashboard  allDiamonds={allDiamonds}  />
           </Route>
           <Route exact path="/">
               <Home/>
