@@ -19,7 +19,7 @@ function App() {
   }, [])
 
   useEffect(()=> {
-    fetch("http://localhost:3000/diamonds")
+    fetch("http://localhost:3000/diamondsToSell")
     .then((r)=> r.json())
     .then((diamondsData)=> setSellDiamonds(diamondsData) )
   }, [])
@@ -38,7 +38,7 @@ function App() {
               <StockDashboard sellDiamonds={sellDiamonds} setSellDiamonds={setSellDiamonds} allDiamonds={allDiamonds}/>
           </Route>
           <Route path="/selldashboard">
-              <SellDashboard />
+              <SellDashboard sellDiamonds={sellDiamonds} allDiamonds={allDiamonds} setAllDiamonds={setAllDiamonds} />
           </Route>
           <Route exact path="/">
               <Home/>

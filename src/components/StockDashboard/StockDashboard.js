@@ -18,7 +18,9 @@ function StockDashboard({allDiamonds, sellDiamonds, setSellDiamonds}) {
      
      const newAllDiamonds = sortedDiamonds.filter((diamond)=> 
             filterBy === "All" ? true : diamond.shape === filterBy)
-  console.log(newAllDiamonds)
+
+    const newAllDiamonds2 = newAllDiamonds.filter((dia)=> dia.sell === "No")
+
 
 return (
     <div>
@@ -26,7 +28,7 @@ return (
         <hr/>
         <Filter sortBy={sortBy} setSortBy={setSortBy} filterBy={filterBy} setFilterBy={setFilterBy} />
         <hr/>
-        <StockTable sellDiamonds={sellDiamonds} setSellDiamonds={setSellDiamonds} newAllDiamonds={newAllDiamonds} />
+        <StockTable sellDiamonds={sellDiamonds} setSellDiamonds={setSellDiamonds} newAllDiamonds2={newAllDiamonds2} />
     </div>
 
 

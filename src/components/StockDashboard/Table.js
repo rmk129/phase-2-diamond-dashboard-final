@@ -10,42 +10,37 @@ import Button from 'react-bootstrap/Button';
 
 
 
-export default function StockTable({newAllDiamonds, sellDiamonds, setSellDiamonds}) {
+export default function StockTable({newAllDiamonds2, sellDiamonds, setSellDiamonds}) {
 
   function addSellDiamond(data){
     setSellDiamonds(...sellDiamonds, data)
   }
 
 function handleSellClick(e){
+
+
   const jsonData = e.target.value; 
   const dia = JSON.parse(jsonData);
   
       
 
     const formData = {
-      shape: dia.shape,
-      color: dia.color,
-      clarity: dia.clarity,
-      cut: dia.cut,
-      weight: dia.weight,
-      cost: dia.cost,
-      price: dia.price
+      sell: "Yes"
   }
 
   const configObj = {
-      method: 'POST', 
+      method: 'PATCH', 
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify(formData)
   }
 
-  fetch('http://localhost:3000/diamondsToSell', configObj)
+  fetch('http://localhost:3000/diamonds/'+ dia.id, configObj)
   .then(res => res.json())
-  .then(data => addSellDiamond(data))
   alert("Your Diamond has been added to your Sales Cart!")
 
-  fetch('http://localhost:3000/diamonds/' + dia.id, {
-  method: 'DELETE',
-})
+//   fetch('http://localhost:3000/diamonds/' + dia.id, {
+//   method: 'DELETE',
+// })
 e.target.parentNode.parentNode.remove();
     
 }
@@ -67,7 +62,7 @@ e.target.parentNode.parentNode.remove();
           </TableRow>
         </TableHead>
         <TableBody>
-          {newAllDiamonds.map((dia) => (
+          {newAllDiamonds2.map((dia) => (
             <TableRow
               key={dia.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

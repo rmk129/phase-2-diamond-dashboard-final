@@ -1,26 +1,6 @@
 {
   "diamonds": [
     {
-      "id": 1,
-      "shape": "Round",
-      "color": "D",
-      "clarity": "VS1",
-      "cut": "Excellent",
-      "weight": "1.53",
-      "cost": "1600",
-      "price": "2000"
-    },
-    {
-      "id": 2,
-      "shape": "Round",
-      "color": "E",
-      "clarity": "SI1",
-      "cut": "Excellent",
-      "weight": "2.23",
-      "cost": "2100",
-      "price": "2500"
-    },
-    {
       "id": 4,
       "shape": "Oval",
       "color": "F",
@@ -28,7 +8,8 @@
       "cut": "Excellent",
       "weight": "1.89",
       "cost": "1500",
-      "price": "1800"
+      "price": "1800",
+      "sell": "No"
     },
     {
       "id": 5,
@@ -38,17 +19,8 @@
       "cut": "Excellent",
       "weight": "1.76",
       "cost": "1700",
-      "price": "1900"
-    },
-    {
-      "shape": "Emerald",
-      "color": "F",
-      "clarity": "SI1",
-      "cut": "Good",
-      "weight": "1.25",
-      "cost": "1000",
-      "price": "1300",
-      "id": 6
+      "price": "1900",
+      "sell": "No"
     },
     {
       "shape": "Oval",
@@ -58,17 +30,8 @@
       "weight": "1.01ct",
       "cost": "600",
       "price": "1000",
-      "id": 7
-    },
-    {
-      "shape": "Emerald",
-      "color": "F",
-      "clarity": "SI1",
-      "cut": "Good",
-      "weight": "1.25",
-      "cost": "1000",
-      "price": "1300",
-      "id": 8
+      "id": 7,
+      "sell": "Yes"
     },
     {
       "shape": "Oval",
@@ -78,17 +41,8 @@
       "weight": "1.5",
       "cost": "1600",
       "price": "2000",
-      "id": 9
-    },
-    {
-      "shape": "Radiant",
-      "color": "D",
-      "clarity": "SI1",
-      "cut": "Excellent",
-      "weight": "1.89",
-      "cost": "1900",
-      "price": "2100",
-      "id": 10
+      "id": 9,
+      "sell": "Yes"
     },
     {
       "shape": "Emerald",
@@ -98,7 +52,8 @@
       "weight": "2.10",
       "cost": "1800",
       "price": "2150",
-      "id": 11
+      "id": 11,
+      "sell": "No"
     },
     {
       "shape": "Radiant",
@@ -108,7 +63,8 @@
       "weight": "2.5",
       "cost": "2600",
       "price": "3000",
-      "id": 12
+      "id": 12,
+      "sell": "No"
     },
     {
       "shape": "Radiant",
@@ -118,7 +74,8 @@
       "weight": "2.02",
       "cost": "1800",
       "price": "2200",
-      "id": 13
+      "id": 13,
+      "sell": "No"
     },
     {
       "shape": "Oval",
@@ -128,10 +85,53 @@
       "weight": "1.65",
       "cost": "1300",
       "price": "1700",
-      "id": 14
+      "id": 14,
+      "sell": "No"
+    },
+    {
+      "shape": "Emerald",
+      "color": "F",
+      "clarity": "SI1",
+      "cut": "Good",
+      "weight": "1.25",
+      "cost": "1000",
+      "price": "1300",
+      "id": 15,
+      "sell": "Yes"
+    },
+    {
+      "shape": "Radiant",
+      "color": "D",
+      "clarity": "SI1",
+      "cut": "Excellent",
+      "weight": "1.89",
+      "cost": "1900",
+      "price": "2100",
+      "id": 17,
+      "sell": "No"
+    },
+    {
+      "shape": "Round",
+      "color": "E",
+      "clarity": "SI1",
+      "cut": "Excellent",
+      "weight": "2.23",
+      "cost": "2100",
+      "price": "2500",
+      "id": 18,
+      "sell": "No"
+    },
+    {
+      "shape": "Radiant",
+      "color": "E",
+      "clarity": "VS2",
+      "cut": "Excellent",
+      "weight": "3.2",
+      "cost": "3000",
+      "price": "3600",
+      "sell": "No",
+      "id": 19
     }
   ],
-  "diamondsToSell": [
-    
-  ]
+  "diamondsToSell": []
 }

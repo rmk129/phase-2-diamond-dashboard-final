@@ -55,6 +55,8 @@ function StockAddForm({setAllDiamonds, allDiamonds}) {
         weight: weight,
         cost: cost,
         price: price,
+        sell: "No"
+
     }
 
     const configObj = {
@@ -66,7 +68,7 @@ function StockAddForm({setAllDiamonds, allDiamonds}) {
     fetch('http://localhost:3000/diamonds', configObj)
     .then(res => res.json())
     .then(data => addDiamond(data))
-    history.push("/dashboard")
+    history.push("/stockdashboard")
     alert("Your Diamond has been added!")
 
   }
