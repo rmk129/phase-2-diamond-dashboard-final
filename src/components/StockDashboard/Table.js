@@ -10,11 +10,11 @@ import Button from 'react-bootstrap/Button';
 
 
 
-export default function StockTable({newAllDiamonds2, sellDiamonds, setSellDiamonds}) {
+export default function StockTable({newAllDiamonds2, updateDiamonds}) {
 
-  // function addSellDiamond(data){
-  //   setSellDiamonds(...sellDiamonds, data)
-  // }
+  
+
+
 
 function handleSellClick(e){
 
@@ -36,10 +36,11 @@ function handleSellClick(e){
 
   fetch('http://localhost:3000/diamonds/'+ dia.id, configObj)
   .then(res => res.json())
+  .then((data)=> updateDiamonds(data) )
   alert("Your Diamond has been added to your Sales Cart!")
 
 
-e.target.parentNode.parentNode.remove();
+
     
 }
 

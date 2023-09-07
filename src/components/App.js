@@ -10,18 +10,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [allDiamonds, setAllDiamonds] = useState([])
-  const [sellDiamonds, setSellDiamonds] = useState([])
+  
+  function updateDiamonds(diamondToUpdate){
+    const updatedDiamonds = allDiamonds.map((dia) => {
+      if (dia.id === diamondToUpdate.id){
+          return diamondToUpdate
+      }
+    else {
+      return dia
+    }
+  })
+  
+  setAllDiamonds(updatedDiamonds)
+  } 
   
   useEffect(()=> {
     fetch("http://localhost:3000/diamonds")
     .then((r)=> r.json())
     .then((diamondsData)=> setAllDiamonds(diamondsData) )
-  }, [])
-
-  useEffect(()=> {
-    fetch("http://localhost:3000/diamondsToSell")
-    .then((r)=> r.json())
-    .then((diamondsData)=> setSellDiamonds(diamondsData) )
   }, [])
 
 
@@ -35,10 +41,10 @@ function App() {
               <StockAddForm allDiamonds={allDiamonds} setAllDiamonds={setAllDiamonds} />
           </Route>
           <Route path="/stockdashboard">
-              <StockDashboard sellDiamonds={sellDiamonds} setSellDiamonds={setSellDiamonds} allDiamonds={allDiamonds}/>
+              <StockDashboard updateDiamonds={updateDiamonds}   allDiamonds={allDiamonds}/>
           </Route>
           <Route path="/selldashboard">
-              <SellDashboard  allDiamonds={allDiamonds}  />
+              <SellDashboard updateDiamonds={updateDiamonds}  allDiamonds={allDiamonds}  />
           </Route>
           <Route exact path="/">
               <Home/>

@@ -3,7 +3,7 @@ import SellTable from "./SellTable";
 import SellForm from "./SellCustomerForm";
 
 
-function SellDashboard({allDiamonds}){
+function SellDashboard({allDiamonds, updateDiamonds}){
  
   const sellDiamonds = allDiamonds.filter((dia)=> dia.sell === "Yes")
  
@@ -12,9 +12,9 @@ function SellDashboard({allDiamonds}){
         <div>
             <h1>Sales Portal</h1>
             <hr/>
-          <SellTable  sellDiamonds={sellDiamonds} />
+          <SellTable updateDiamonds={updateDiamonds} sellDiamonds={sellDiamonds} />
             <hr/>
-            <SellForm/>
+            {/* <SellForm/> */}
         </div>
     
     

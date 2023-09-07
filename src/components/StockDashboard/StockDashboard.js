@@ -3,7 +3,7 @@ import Filter from "./Filter";
 import StockTable from "./Table";
 
 
-function StockDashboard({allDiamonds, sellDiamonds, setSellDiamonds}) {
+function StockDashboard({allDiamonds, updateDiamonds}) {
     const [sortBy, setSortBy] = useState("Carat Weight")
     const [filterBy, setFilterBy] = useState("All")
 
@@ -28,7 +28,7 @@ return (
         <hr/>
         <Filter sortBy={sortBy} setSortBy={setSortBy} filterBy={filterBy} setFilterBy={setFilterBy} />
         <hr/>
-        <StockTable sellDiamonds={sellDiamonds} setSellDiamonds={setSellDiamonds} newAllDiamonds2={newAllDiamonds2} />
+        <StockTable updateDiamonds={updateDiamonds} newAllDiamonds2={newAllDiamonds2} />
     </div>
 
 
